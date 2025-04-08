@@ -226,6 +226,7 @@ ENV PORT=5001
 
 WORKDIR /app
 COPY --from=builder /app/ /app/
+ENV PYTHONPATH="${PYTHONPATH}:/app"
 
 EXPOSE 5001
 RUN echo 'Hello from Dockerfile' > /tmp/hello.txt
